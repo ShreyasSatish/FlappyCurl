@@ -10,10 +10,10 @@ public class Player : MonoBehaviour
     private int spriteIndex;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-    //     InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.08f);
-    // }
+    void Start()
+    {
+        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.08f);
+    }
 
     // Update is called once per frame
     void Update()
@@ -52,17 +52,17 @@ public class Player : MonoBehaviour
     }
 
     // Animate the Sprite
-    // void AnimateSprite()
-    // {
-    //     spriteIndex++;
+    void AnimateSprite()
+    {
+        spriteIndex++;
 
-    //     if (spriteIndex >= sprites.Length)
-    //     {
-    //         spriteIndex = 0;
-    //     }
+        if (spriteIndex >= sprites.Length)
+        {
+            spriteIndex = 0;
+        }
 
-    //     spriteRenderer.sprite = sprites[spriteIndex]; 
-    // }
+        spriteRenderer.sprite = sprites[spriteIndex]; 
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
